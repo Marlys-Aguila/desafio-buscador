@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Buscador de propiedades</title>
+        <!-- Bootstrap 5.2 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous"
+        />
+        <!-- Mi CSS -->
+        <link rel="stylesheet" href="assets/css/estilos.css" />
+    </head>
+
+    <body>
+        <nav>
+            <section>
+                    <div>
+                        <p>Cantidad de cuartos:</p>
+                        <input
+                            min="1"
+                            id="numero-cuartos"
+                            class="form-control w-50 m-auto"
+                            type="number"
+                        />
+                    </div>
+                    <div>
+                        <span>Metros cuadrados </span>
+                        <div class="d-flex">
+                            <div class="me-4">
+                                <p>desde:</p>
+                                <input
+                                    min="0"
+                                    id="limite-inferior-mt2"
+                                    class="form-control"
+                                    type="number"
+                                />
+                            </div>
+                            <div>
+                                <p>hasta:</p>
+                                <input
+                                    min="1"
+                                    id="limite-superior-mt2"
+                                    class="form-control"
+                                    type="number"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            <button id="buscar" class="btn btn-warning">Buscar</button>
+        </nav>
+
+        <section id="Propiedades">
+            <h4 class="py-3">Total: <span id="total-propiedades"></span></h4>
+
+            <div class="propiedades">
+                <!-- Aquí se insertan las tarjetas desde JS con innerHTML -->
+            </div>
+        </section>
+
+        <!-- Mi Script -->
+        <script src="assets/js/index.js"></script>
+    </body>
+</html>
